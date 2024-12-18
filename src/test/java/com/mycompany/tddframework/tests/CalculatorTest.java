@@ -17,4 +17,14 @@ public class CalculatorTest {
 
     }
 
+    @Test
+    public void testDivisionByZero() {
+        Calculator calculator = new Calculator();
+        try {
+            calculator.divide(10, 0);
+        } catch (ArithmeticException e) {
+            Assertions.assertEquals("/ by zero", e.getMessage(), "Division by zero should throw an exception");
+        }
+    }
+
 }

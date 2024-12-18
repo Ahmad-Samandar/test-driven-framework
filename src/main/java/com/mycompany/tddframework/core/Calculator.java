@@ -7,4 +7,11 @@ public class Calculator {
         return a + b;
     }
 
+    // Method to divide two integers
+    public int divide(int a, int b) {
+        if (b == 0) throw new ArithmeticException("/ by zero");
+        return a / b;
+    }
+
+
 }
